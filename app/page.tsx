@@ -7,8 +7,7 @@ import HowItWorks from "@/components/HowItWorks";
 import NavBar from "@/components/NavBar";
 import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import Image from "next/image";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [formData, setFormData] = useState({

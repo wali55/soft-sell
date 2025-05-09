@@ -1,8 +1,26 @@
+import { FormEvent } from "react";
+
+type FormDataType = {
+  name: string;
+  email: string;
+  company: string;
+  licenseType: string;
+  message: string;
+};
+
+type ErrorsType = {
+  name?: string;
+  email?: string;
+  company?: string;
+  licenseType?: string;
+  message?: string;
+};
+
 const Contact = ({handleSubmit, formData, setFormData, errors}: {
-    handleSubmit: any;
-    formData: any;
-    setFormData: any;
-    errors: any;
+    handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
+    formData: FormDataType;
+    setFormData: React.Dispatch<React.SetStateAction<FormDataType>>;
+    errors: ErrorsType;
 }) => {
     return (
         <section className="py-20 px-4">
